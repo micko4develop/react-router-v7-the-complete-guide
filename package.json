@@ -1,0 +1,55 @@
+{
+  "name": "react-router-v7-the-complete-guide",
+  "version": "1.0.0",
+  "description": "Complete guide to React Router v7 with framework mode",
+  "type": "module",
+  "scripts": {
+    "dev": "react-router dev",
+    "build": "react-router build",
+    "start": "react-router-serve ./build/server/index.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "@react-router/dev": "^7.9.3",
+    "@react-router/node": "^7.9.3",
+    "@react-router/serve": "^7.9.3",
+    "@vitejs/plugin-react": "^5.0.4",
+    "axios": "^1.6.2",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "isbot": "^5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^7.9.3",
+    "react-router-dom": "^7.9.3",
+    "styled-components": "^6.1.8"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.55.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "typescript": "^5.2.2",
+    "vite": "^6.3.6"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "react",
+    "router",
+    "v7",
+    "framework",
+    "remix",
+    "routing"
+  ],
+  "author": "React Router v7 Guide",
+  "license": "MIT"
+}
