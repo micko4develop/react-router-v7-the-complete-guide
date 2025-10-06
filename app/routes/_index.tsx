@@ -3,7 +3,6 @@ import { useLoaderData, Link, useSearchParams } from "react-router-dom";
 import { getBooks } from "../lib/api";
 import type { Book } from "../lib/api";
 
-// Constants
 const BOOK_IMAGE_MAP: Record<string, string> = {
   "1": "brave.png",
   "2": "catcher.png", 
@@ -30,11 +29,9 @@ const ORDER_OPTIONS = [
   { value: "descending", label: "Descending" }
 ] as const;
 
-// Types
 type SortField = "title" | "author" | "price";
 type SortOrder = "ascending" | "descending";
 
-// Utility functions
 function getBookImagePath(bookId: string): string {
   const imageName = BOOK_IMAGE_MAP[bookId] || "placeholder.svg";
   return `/assets/images/books/${imageName}`;
@@ -59,7 +56,6 @@ function sortBooks(books: Book[], sortField: SortField, order: SortOrder): Book[
   });
 }
 
-// Loader
 export async function loader({ request }: { request: Request }) {
   const url = new URL(request.url);
   const sort = (url.searchParams.get("sort") || "title") as SortField;
@@ -71,7 +67,6 @@ export async function loader({ request }: { request: Request }) {
   return json({ books: sortedBooks, sort, order });
 }
 
-// Sort Section Component
 function SortSection({ 
   title, 
   name, 
@@ -106,7 +101,6 @@ function SortSection({
   );
 }
 
-// Book Card Component
 function BookCard({ book }: { book: Book }) {
   return (
     <Link 
@@ -127,7 +121,6 @@ function BookCard({ book }: { book: Book }) {
   );
 }
 
-// Main Component
 export default function Index() {
   const { books, sort, order } = useLoaderData() as { 
     books: Book[]; 
